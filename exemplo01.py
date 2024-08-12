@@ -1,29 +1,40 @@
-class VeiculoMotor:
-
-    def __init__(self, minhaMarca, meuModelo):
-
-        self.marca = minhaMarca
-        self.modelo = meuModelo
-
-    def ligar(self, barulho = "vrum vrum"):
-        print("Ligando com", barulho)
-
-    def desligar(self, barulho = "cof! cof!"):
-        print("Desligando com", barulho)
-
-class Motoca(VeiculoMotor):
-
-    qtdrodas = 2
-
-    def ligar(self, grau):
-        print("Ligando com", grau)
-
-class Carreta(VeiculoMotor):
-
-    qtdrodas = 12
-    capacidade = 8000
+class Carro:
     
+    # Método contrutor
+    def __init__(self):
 
-hondinha = Motoca("honda", "CG125")
-hondinha.ligar('Tuim! Tuim!')
-print(hondinha.qtdrodas)
+        # Atributos
+        self.cor = ""
+        self.marca = ""
+        self.modelo = None
+
+    # Métodos
+    def ligar(self):
+        print("Vrum vrum")
+
+    def desligar(self):
+        print("Cof Cof")
+
+
+# Cria um objeto `fuscao` do tipo `Carro`
+fuscao = Carro() # ou criando um "instância" do tipo Carro
+
+# Define o atributo `cor` do objeto `fuscao`
+fuscao.cor = "preto"
+
+# Executa o método `ligar()` do objeto `fuscao`
+fuscao.ligar()
+
+# Desligar o método `desligar()` do objeto `fuscao`
+fuscao.desligar()
+
+# Recebe o atributo `cor` do objeto `fuscao`
+print(fuscao.cor)
+
+
+# Cria outro objeto
+opalao = Carro()        # Instância da classe `Carro`
+opalao.cor = 'vermelho' # Define valor do atributo
+opalao.ligar()          # Executa método
+print(opalao.cor)       # Recebe valor do atributo
+opalao.desligar()       # Executa método

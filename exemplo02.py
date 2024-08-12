@@ -1,43 +1,53 @@
-class Animal:
-    def __init__(self) -> None:
-        self.especie = ''
-        self.genero = ''
-        self.subespecie = ''
+class Carro:
+    
+    # Método contrutor
+    def __init__(self, cor, marca, modelo):
 
-    def setEspecie(self, especie):
-       self.especie = especie.strip(especie)
+        # Cores possíveis
+        cores = {'preto', 'branco', 'vermelho', 'azul'}
 
-    def setGenero(self, genero):
-        self.genero = genero.strip(genero)
-
-    def setSubespecie(self, subespecie):  
-        self.setSubespecie = subespecie.strip(subespecie)  
-
-    def setName(self, name = ""):
-        self.name = name.strip(name)
-
-    def getGenero(self):
-        if self.genero != '':
-             return self.genero 
+        # Atributos
+        self.cor = ''
+        self.marca = ''
+        self.modelo = ''
+        
+        # Testa cor
+        if cor in cores:
+            self.cor = cor
         else:
-            return "Erro ao mostrar espécie."    
+            self.cor = ''
+            print('Vai te catar!')
 
-    def getGenero(self):
-        if self.genero != '':
-             return self.genero     
-        else:
-            return "Erro ao mostrar gênero."
+       
 
-    def getsubespecie(self):
-        if self.subespecie != '':   
-            return self.subespecie
-        else: 
-            return "Erro ao mostrar subespecie."
+    # Métodos
+    def ligar(self):
+        print("Vrum vrum")
 
-minhoca = Animal() 
+    def desligar(self):
+        print("Cof Cof")
 
-minhoca.setEspecie("       Taturana        ")   
-print(minhoca.getEspecie())
 
-minhoca.biscoito = "        Tatyranada         "
-print(minhoca.biscoito)                
+# Cria um objeto `fuscao` do tipo `Carro`
+fuscao = Carro('burro quando foge', 'VW', '1800') # ou criando um "instância" do tipo Carro
+
+# Define o atributo `cor` do objeto `fuscao`
+# fuscao.cor = "preto"
+
+# Executa o método `ligar()` do objeto `fuscao`
+fuscao.ligar()
+
+# Desligar o método `desligar()` do objeto `fuscao`
+fuscao.desligar()
+
+# Recebe o atributo `cor` do objeto `fuscao`
+print(fuscao.cor)
+
+"""
+# Cria outro objeto
+opalao = Carro()        # Instância da classe `Carro`
+opalao.cor = 'vermelho' # Define valor do atributo
+opalao.ligar()          # Executa método
+print(opalao.cor)       # Recebe valor do atributo
+opalao.desligar()       # Executa método
+"""
