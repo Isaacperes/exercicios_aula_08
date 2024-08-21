@@ -1,0 +1,28 @@
+{
+  "user": {
+    "jocadasilva": {
+      "email": "joca@silva.com",
+      "name": "Joca da Silva",
+      "password": "senha123",
+      "status": "on"
+    },
+    "setembrino": {
+      "email": "set@brino.com",
+      "name": "Setembrino Trocatapas",
+      "password": "senha123",
+      "status": "on"
+    },
+    "Hermenilda": {
+      "email": "herme@nilda.com",
+      "name": "Hermenilda Siriliano",
+      "password": "senha123",
+      "status": "on"
+    },
+    "marineuza": {
+      "email": "mari@nelza.com",
+      "name": "Marineuza Siriliano",
+      "password": "senha123",
+      "status": "on"
+    }
+  }
+}
